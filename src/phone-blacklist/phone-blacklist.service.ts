@@ -33,7 +33,7 @@ export class PhoneBlacklistService {
       return null;
     }
   
-    // Ensure the number starts with '+1' for US-based parsing
+    // Ensures the number starts with '+1' for US-based parsing
     const normalizedPhone = phone.startsWith('+') ? phone : `+1${phone}`;
     const phoneNumber = parsePhoneNumberFromString(normalizedPhone, 'US');
     return phoneNumber ? phoneNumber.format('E.164') : null;

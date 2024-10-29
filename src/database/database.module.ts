@@ -5,7 +5,6 @@ import { Pool } from 'pg';
 
 // This module provides a database connection pool that can be injected and used throughout the application. 
 // It utilizes PostgreSQL as the database, with connection parameters sourced from environment variables.
-
 @Module({
   providers: [
     {
