@@ -42,7 +42,7 @@ export class PhoneBlacklistService {
   // Saves the phone number to the database, with error handling for potential issues
   private async savePhoneNumber(phoneNumber: string) {
     try {
-      await this.dbPool.query('INSERT INTO blacklist(phone_number) VALUES ($1) ON CONFLICT DO NOTHING', [phoneNumber]);
+      await this.dbPool.query('INSERT INTO workstream_phone_numbers(phone_numbers) VALUES ($1) ON CONFLICT DO NOTHING', [phoneNumber]);
     } catch (error) {
       console.error(`Failed to insert ${phoneNumber}:`, error);
     }
